@@ -5,6 +5,7 @@
         --green: #49aa26;
         --light-green: #3dd705;
         --red: #e92929;
+        --light-red: #eb4646;
     }
     
     * {
@@ -71,6 +72,8 @@
     
     button:hover {
         background: var(--light-green);
+        border: var(--green);
+        transform: scale(1.2);
     }
     
     .button.new {
@@ -90,7 +93,9 @@
     }
     
     .button.cancel:hover {
-        opacity: 1;
+        background-color: var(--light-red);
+        color: #fff;
+        border: 2px var(--red) solid;
     }
     /* Header =======================*/
     
@@ -111,17 +116,32 @@
     }
     
     #balance h2 {
-        color: white;
+        color: #fff;
         margin-top: 0;
     }
     /* Cards ========================*/
     
     .card {
-        background: white;
+        background: #fff;
         padding: 1.5rem 2rem;
         border-radius: 0.25rem;
         margin-bottom: 2rem;
         color: var(--dark-blue);
+    }
+    
+    .card:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    
+    .card.income {
+        background: #90da75;
+        color: #fff;
+    }
+    
+    .card.expense {
+        background: #ec8b8b;
+        color: #fff;
     }
     
     .card h3 {
@@ -139,7 +159,7 @@
     }
     
     .card.total {
-        background: var(--green);
+        background: #6e88df;
         color: white;
     }
     /* Table ========================*/
@@ -167,7 +187,7 @@
     }
     
     table thead th {
-        background: white;
+        background: #fff;
         font-weight: normal;
         padding: 1rem 2rem;
         text-align: left;
@@ -179,10 +199,11 @@
     
     table tbody tr:hover {
         opacity: 1;
+        transform: scale(1.05);
     }
     
     table tbody td {
-        background: white;
+        background: #fff;
         padding: 1rem 2rem;
     }
     
