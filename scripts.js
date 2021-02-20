@@ -132,9 +132,9 @@ const DOM = {
 const Utils = {
 
     formatAmount(value) {
-        value = value * 100
+        Number(value.replace(/\,\./g, "")) * 100
 
-        return Math.round(value)
+        return value * 100
     },
 
     // formatar os dados para salvar
